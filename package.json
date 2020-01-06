@@ -1,0 +1,39 @@
+{
+  "name": "year-month",
+  "version": "0.0.1",
+  "description": "Simple, fast date calculations with a granularity of one month",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "tape lib/**/*.spec.js",
+    "lint": "eslint lib",
+    "lint:fix": "eslint --fix lib",
+    "ci": "npm install && npm run lint && npm test",
+    "release": "rm -rf node_modules && npm i --production && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ukslim/year-month.git"
+  },
+  "keywords": [
+    "date",
+    "immutable"
+  ],
+  "author": "Wealth Wizards Engineering",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ukslim/year-month/issues"
+  },
+  "homepage": "https://github.com/ukslim/year-month#readme",
+  "devDependencies": {
+    "eslint": "6.1.0",
+    "eslint-config-airbnb-base": "4.0.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-ramda": "2.5.1",
+    "jsverify": "0.8.4",
+    "ramda": "0.26.1",
+    "tape": "4.12.1"
+  }
+}
