@@ -37,10 +37,6 @@ Months are 1-indexed for both input and output - that is, January is 1, December
 
 ## Instantiate
 
-The constructor `new YearMonth(monthNum)` accepts months since Jan 1970, 
-and should generally be considered internal. Use one of the following static
-methods instead:
-
 `YearMonth.fromNumbers(2020, 3)` - March 2020
 
 `YearMonth.parse('2020-03)` - This is the canonical string format
@@ -67,7 +63,7 @@ methods instead:
     ym.nextMonthOf(2) // 2020-02
     ym.nextMonthOf(5) // 2019-05 -- nextMonthOf() is inclusive
 
-# Compare
+## Compare
 
 `YearMonth` implements `equals()` and `valueOf()`.
 
@@ -89,6 +85,23 @@ method.
     YearMonth.parse('2020-05') - YearMonth.parse('2019-05') // 12
     YearMonth.parse('2020-05').diff(YearMonth.parse('2019-05')) // 12
 
+## Custom parsers and formatters
+
+The ISO-8601 inspired default format of `YYYY-MM` is the **best** format and I promise you'll be happier if you stick with it.
+
+But you can customise your instance of the library with your own parse and format functions.
+
+    // The parser takes a string and returns an array where arr[0] is the year and arr[1] is the month
+    const YearMonthWithCustomParser = require('year-month').withParser( s => s.split('/').reverse());
+    const ym = YearMonthWithCustomParser.parse('3/2018');
+    console.log(ym.toString()); // "2018-03"
+
+    // formatter takes numbers (year, month) and returns a string
+    const YearMonthWithCustomFormat = require('year-month').withFormatter( (year, month) => `${month}/${year`});
+    console.log(YearMonthWithCustomFormat.parse('2019-05').toString()); // "5/2019"
+
+    // you can chain these
+    const MyCustomYearMonth = require('year-month').withParser(myParser).withFormatter(myFormatter);
 
 ---
 
