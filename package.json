@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ukslim/year-month.git"
+    "url": "git+https://github.com/WealthWizardsEngineering/year-month.git"
   },
   "keywords": [
     "date",
@@ -24,9 +24,9 @@
   "author": "Wealth Wizards Engineering",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ukslim/year-month/issues"
+    "url": "https://github.com/WealthWizardsEngineering/year-month/issues"
   },
-  "homepage": "https://github.com/ukslim/year-month#readme",
+  "homepage": "https://github.com/WealthWizardsEngineering/year-month",
   "devDependencies": {
     "eslint": "6.1.0",
     "eslint-config-airbnb-base": "4.0.0",
@@ -34,6 +34,6 @@
     "eslint-plugin-ramda": "2.5.1",
     "jsverify": "0.8.4",
     "ramda": "0.26.1",
-    "tape": "4.12.1"
+    "tape": "^5.0.0-next.1"
   }
 }
