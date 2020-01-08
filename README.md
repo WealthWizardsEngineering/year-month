@@ -92,6 +92,8 @@ The ISO-8601 inspired default format of `YYYY-MM` is the **best** format and I p
 But you can customise your instance of the library with your own parse and format functions.
 
     // The parser takes a string and returns an array where arr[0] is the year and arr[1] is the month
+    // The elements may be Strings or Numbers - parse() will throw an error if they can't be coerced to numbers
+    // or if the month is out of range.
     const YearMonthWithCustomParser = require('year-month').withParser( s => s.split('/').reverse());
     const ym = YearMonthWithCustomParser.parse('3/2018');
     console.log(ym.toString()); // "2018-03"
