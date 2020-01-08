@@ -2,4 +2,7 @@
 .circleci
 test
 *.tgz
+*.spec.js
 .history/
+.vscode/
+
