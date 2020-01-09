@@ -1,4 +1,5 @@
-# year-month
+[![NPM](https://nodei.co/npm/year-month.png?compact=true)](https://nodei.co/npm/year-month/)
+# year-month [![CircleCI](https://circleci.com/gh/WealthWizardsEngineering/year-month.svg?style=svg)](https://circleci.com/gh/WealthWizardsEngineering/year-month)
 Simple, fast date calculations with a granularity of one month.
 
 ## Install
