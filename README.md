@@ -40,7 +40,8 @@ Months are 1-indexed for both input and output - that is, January is 1, December
 
 `YearMonth.fromNumbers(2020, 3)` - March 2020
 
-`YearMonth.parse('2020-03)` - This is the canonical string format
+`YearMonth.parse('2020-03')` - This is the canonical string format. YearMonth's default parser does not attempt 
+to infer other formats, but see [Custom parsers](#custom-parsers-and-formatters).
 
 `YearMonth.parse('2020-03-20')` - Day of month is ignored
 
@@ -53,6 +54,7 @@ Months are 1-indexed for both input and output - that is, January is 1, December
 ## Methods
 
     const ym = YearMonth.parse('2019-05');
+    YearMonth.isYearMonth(ym); // true
     ym.year() // 2019
     ym.month() // 5
     ym.toString() // '2019-05'
