@@ -1,6 +1,6 @@
 {
   "name": "year-month",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Simple, fast date calculations with a granularity of one month",
   "main": "lib/index.js",
   "directories": {
