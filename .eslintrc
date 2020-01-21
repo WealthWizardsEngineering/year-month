@@ -12,6 +12,7 @@
       "exports": "always-multiline",
       "functions": "never"
     }],
+    "strict": 0,
     "no-underscore-dangle": 0,
     "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.spec.js"]}],
     "ramda/always-simplification": "error",
