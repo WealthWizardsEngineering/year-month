@@ -3,6 +3,7 @@
   "version": "0.0.6",
   "description": "Simple, fast date calculations with a granularity of one month",
   "main": "lib/index.js",
+  "types": "lib/year-month.d.ts",
   "directories": {
     "lib": "lib"
   },
